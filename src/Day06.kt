@@ -41,7 +41,7 @@ class Day06(input: List<String>) : Challenge() {
         // Initial population
         input.forEach { i -> counter[i] = counter[i]!! + 1 }
 
-        for (i in 1..days) {
+        repeat(days) {
             val newFishes = counter[0]!!
 
             (1..8).forEach { counter[it - 1] = counter[it]!! }
